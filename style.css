@@ -1,0 +1,38 @@
+.textfield {
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 4px;
+    
+}
+
+.button{
+    margin-top: 10px;
+    width: 90px;
+    height: 40px;
+    padding: 5px;
+    background-color: aqua;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.list-item{
+    padding-left: 8px;
+    padding-right: 8px;
+    padding: 4px;
+    gap: 8px;
+    display: flex;
+}
+
+.delete-button{
+    background-color: red;
+    color: azure;
+    padding: 8px;
+    border-radius: 10px;
+}
