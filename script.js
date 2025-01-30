@@ -1,6 +1,9 @@
+let currentEditingTask = null;
+
 function handleTask() {
     const input = document.getElementById('tf-input');
     const inputValue = input.value.trim();
+    const taskButton = document.getElementById('task-button');
 
     if (inputValue === "") {
         alert("Please enter a task!");
@@ -8,17 +11,14 @@ function handleTask() {
     }
 
     if (currentEditingTask) {
-       
         currentEditingTask.querySelector('span').textContent = inputValue;
-        currentEditingTask = null; 
+        currentEditingTask = null;
+        taskButton.textContent = 'Add Task';
     } else {
-       
         addTask(inputValue);
     }
 
-   
     input.value = '';
-    document.getElementById('task-button').textContent = 'Add Task';
 }
 
 function addTask(taskText) {
@@ -55,13 +55,9 @@ function startEditTask(task) {
     const input = document.getElementById('tf-input');
     const taskButton = document.getElementById('task-button');
 
-   
     input.value = task.querySelector('span').textContent;
-
-    
     taskButton.textContent = 'Edit Task';
 
-   
     currentEditingTask = task;
 }
 
